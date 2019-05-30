@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <title>Simple jQuery Table</title>
+
+    <link rel="stylesheet" href="./index.css"">
+    
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../simpletable.js"></script>
+
+    <script type="text/javascript" src="./index.js"></script>
+</head>
+
+<body>
+
+    <center>
+        <div class='example'>
+            <p>基础表格</p>
+            <div id="basicTable">
+            </div>
+        </div>
+
+        <div class='example'>
+            <p>固定表头</p>
+            <div id="fixedHeaderTable">
+            </div>
+        </div>
+
+        <div class='example'>
+            <p>固定列</p>
+            <div id="fixedColumnTable">
+            </div>
+        </div>
+
+        <div class='example'>
+            <p>固定列和表头</p>
+            <div id="fixedColHeadTable">
+            </div>
+        </div>
+
+        <div class='example'>
+            <p>多级表头</p>
+            <div id="groupHeaderTable">
+            </div>
+        </div>
+
+        <div class='example'>
+            <p>单选</p>
+            <div id="oneRowSelTable">
+            </div>
+            <button onclick="oneRowClick()">查看所选</button>
+        </div>
+
+        <div class='example'>
+            <p>多选</p>
+            <div id="multRowsSelTable">
+            </div>
+            <button onclick="multRowsClick()">查看所选</button>
+        </div>
+
+        <div class='example'>
+            <p>合并行</p>
+            <div id="mergeRowTable">
+            </div>
+        </div>
+
+        <div class='example'>
+            <p>合并列</p>
+            <div id="mergeColumnTable">
+            </div>
+        </div>
+
+    </center>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // 基础表格
+            makeBasicTable();
+            // 固定表头
+            fixedHeaderTable();
+            // 固定列
+            fixedColumnTable();
+            // 固定列和表头
+            fixedColHeadTable();
+            // 多级表头
+            groupHeaderTable();
+            // 单选
+            oneRowSelTable();
+            // 多选
+            multRowsSelTable();
+            // 合并行
+            mergeRowTable();
+            // 合并列
+            mergeColumnTable();
+        });
+    </script>
+
+</body>
+
+</html>

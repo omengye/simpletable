@@ -171,7 +171,7 @@ var cgrid = {
                             };
                             loopHide(iterObj);
                         }
-                        headSpan[it].colspan = headChildMap[it].length - hidenum;
+                        headSpan[it].colspan = childnums - hidenum;
                         headSpan[it].rowspan = 1;
                     }
                     else {
@@ -238,7 +238,12 @@ var cgrid = {
             for (var i in headnum) {
                 headStr += "<tr>";
                 if (this.option.withCheckBox && i === "0") {
-                    headStr += "<th colspan='1' rowspan='"+rownum+"'><input type='checkbox' onchange='cgrid.grids[\""+tableid+"\"].ckBox()'/></th>";
+                    if (this.option.disableMutiSel) {
+                        headStr += "<th colspan='1' rowspan='"+rownum+"'></th>";
+                    }
+                    else {
+                        headStr += "<th colspan='1' rowspan='"+rownum+"'><input type='checkbox' onchange='cgrid.grids[\""+tableid+"\"].ckBox()'/></th>";
+                    }
                 }
 
                 var head = headMap[i];
@@ -497,7 +502,7 @@ var cgrid = {
         };
 
         gridobj.ckBox = function() {
-            var cked = $('#table table thead input[type="checkbox"]').prop('checked');
+            var cked = $('#'+tableid+' table thead input[type="checkbox"]').prop('checked');
             if (!cked) {
                 this.uncheckAll();
             }
@@ -583,7 +588,7 @@ var cgrid = {
         };
 
         gridobj.setFixedTitle = function(y) {
-            $("#table table th").css('top', y);
+            $("#"+tableid+" table th").css('top', y);
         };
 
         //监听页面滚动事件

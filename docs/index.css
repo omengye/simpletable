@@ -1,0 +1,75 @@
+.example {
+    margin-top: 50px;
+}
+
+center {
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(39, 39, 39)
+}
+
+button {
+    margin-top: 10px;
+}
+
+.cgridTable {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-left: 1px solid rgb(210, 210, 210);
+    border-top: 1px solid rgb(210, 210, 210);
+    border-bottom: 1px solid rgb(210, 210, 210);
+    width: 900px;
+}
+
+.cgridTable>thead>tr>td,
+th {
+    height: 35px;
+    border-right: 1px solid rgb(210, 210, 210);
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cgridTable>tbody>tr>td,
+th {
+    height: 30px;
+    background-color: white;
+    border: 1px solid rgb(210, 210, 210);
+    padding: 5px 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#basicTable {
+    overflow: auto;
+    width: 920px;
+}
+
+#fixedHeaderTable {
+    overflow: auto;
+    width: 920px;
+    height: 206px;
+    margin-left: 12px;
+}
+
+#fixedColumnTable {
+    overflow: auto;
+    width: 920px;
+    margin-left: 12px;
+}
+
+.cgridTable_fixedColumn {
+    width: 1200px;
+}
+
+#fixedColHeadTable {
+    overflow: auto;
+    width: 920px;
+    height: 206px;
+    margin-left: 12px;
+}
